@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Signika:300,400,700');
+
+.main-wrap{
+	font-family: 'Signika', sans-serif;
+}
+
+.section1{
+	background: #BFAFB2;
+}
+.section2{
+	background: #CCC8C9;
+}
+
+.main-wrap .main-header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.main-wrap .main-header h1.title{
+	text-align: center;
+	font-size: 6em;
+	text-transform: uppercase;
+	color: #47383F;
+	font-weight: lighter;
+	letter-spacing: 2px;
+	margin: 20px 0 10px;
+}
+
+.main-wrap .main-header p.message{
+	text-align: center;
+	font-size: 1.40em;
+	color: #47383F;
+	letter-spacing: 1px;
+	margin: 0 0 20px;
+}

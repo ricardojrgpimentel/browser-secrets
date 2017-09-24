@@ -3,38 +3,62 @@ import 'bootstrap/dist/css/bootstrap-grid.min.css'
 import 'bootstrap/dist/css/bootstrap-reboot.min.css'
 import './style.css'
 import parser from 'ua-parser-js'
+import Browser from '../Browser'
+import IPAddress from '../IPAddress'
+import Os from '../Os'
+import Device from '../Device'
+import Screen from '../Screen'
 
 class MainApp extends React.Component{
 
 	render(){
-		
+
 		let ua = parser()
-		console.log(ua)
 
 		return(
 			<div className='main-wrap'>
-				<div className="section1">
+				<div className="section2">
 					<div className="main-header">
 						<h1 className='title'>Browser Secrets</h1>
 						<p className="message">Everything the internet knows about you from your Browser</p>
 					</div>
 				</div>
-				<div className="section2">
+				<div className="section1">
 					<div className="container">
-						<p>Browser: {ua.browser.name}</p>
-						<p>Browser: {ua.browser.version}</p>
-						<p>CPU: {ua.cpu.architecture}</p>
-						<p>Device: {ua.device.model}</p>
-						<p>Device: {ua.device.type}</p>
-						<p>Device: {ua.device.vendor}</p>
-						<p>OS: {ua.os.name}</p>
-						<p>OS: {ua.os.version}</p>
-						{console.log(navigator)}
-						{/* navigator.plugins.map((plugin, idx) => {
-							return(
-								<p>{plugin.name}</p>
-							)
-						}) */}
+						<div className='row'>
+							<div className='col-md-4'>
+								<Browser
+									name={ua.browser.name}
+									version={ua.browser.version}
+								/>
+							</div>
+							<div className='col-md-4'>
+								<Os
+									name={ua.os.name}
+									version={ua.os.version}
+								/>
+							</div>
+							<div className='col-md-4'>
+								<IPAddress />
+							</div>
+							<div className='col-md-4'>
+								<Screen />
+							</div>
+							<div className='col-md-4'>
+								<Device
+									architecture={ua.cpu.architecture}
+									model={ua.device.model}
+									type={ua.device.type}
+									vendor={ua.device.vendor}
+								/>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div className="section2">
+					<div className="main-footer">
+						<p className='message'>Made by Ricardo Pimentel</p>
+						<p className='message'>Powered by React</p>
 					</div>
 				</div>
 			</div>

@@ -5,10 +5,13 @@
 }
 
 .section1{
-	background: #BFAFB2;
+	background: #fff;
+	padding: 10px;
 }
 .section2{
-	background: #CCC8C9;
+	background-color: #fafcfe;
+	border-top: 1px solid #edeff1;
+	border-bottom: 1px solid #edeff1;
 }
 
 .main-wrap .main-header{
@@ -26,6 +29,7 @@
 	font-weight: lighter;
 	letter-spacing: 2px;
 	margin: 20px 0 10px;
+	line-height: 1;
 }
 
 .main-wrap .main-header p.message{
@@ -34,4 +38,42 @@
 	color: #47383F;
 	letter-spacing: 1px;
 	margin: 0 0 20px;
+}
+
+.box-blue{
+	border: 1px solid #edeff1;
+	border-top: 5px solid #ff9b12;
+	border-radius: 3px;
+	margin: 10px;
+	padding: 10px;
+}
+
+.box-blue h2.title{
+	font-weight: 300;
+	text-transform: uppercase;
+}
+
+.box-blue p{
+	margin: 0;
+}
+
+.box-blue p span{
+	margin-left: 5px;
+}
+
+.col-md-4{
+	margin: 0;
+	padding: 0;
+}
+
+.main-footer{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	padding: 30px;
+}
+
+.main-footer p{
+	margin: 0;
 }

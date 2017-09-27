@@ -32,6 +32,34 @@
 	line-height: 1;
 }
 
+@media only screen and (max-width: 576px) {
+
+   .main-wrap .main-header h1.title {
+      font-size: 2em;
+   }
+}
+
+@media only screen and (max-width: 768px) {
+
+   .main-wrap .main-header h1.title {
+      font-size: 3em;
+   }
+}
+
+@media only screen and (max-width: 992px) {
+
+   .main-wrap .main-header h1.title {
+      font-size: 4em;
+   }
+}
+
+@media only screen and (min-width: 1200px) {
+
+   .main-wrap .main-header h1.title {
+      font-size: 6em;
+   }
+}
+
 .main-wrap .main-header p.message{
 	text-align: center;
 	font-size: 1.40em;
@@ -92,4 +120,16 @@
 ul{
 	margin: 0;
 	padding-left: 20px;
+}
+
+.tv{
+	border: 1px solid black;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-right: 10px;
+}
+
+.tv span{
+	font-size: 11px;
 }

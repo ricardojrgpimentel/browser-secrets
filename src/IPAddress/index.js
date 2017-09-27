@@ -34,11 +34,14 @@ class IPAddress extends React.Component{
     return(
       <div className='box-blue'>
         <h2 className='title'>IP Address</h2>
+        <div className="content">
+          <img src='/img/ipaddress.svg' alt='browser' />
         {this.state.error ?
           <p>{this.state.error}</p> :
           this.state.userIP ?
           <p>{this.state.userIP}</p> :
           <p>Loading...</p>}
+        </div>
       </div>
     )
   }

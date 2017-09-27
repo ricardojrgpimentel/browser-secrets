@@ -14,6 +14,8 @@ class Os extends React.Component{
         return '/img/chrome.svg'
       case 'FreeBSD':
         return '/img/freeBSD.png'
+      case 'Android':
+        return '/img/android.svg'
       default:
         return '/img/windows.svg'
     }

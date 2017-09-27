@@ -48,6 +48,17 @@
 	padding: 10px;
 }
 
+.box-blue .content{
+	display: flex;
+	align-items: center;
+}
+
+.box-blue .content img{
+	width: 64px;
+	height: 64px;
+	padding: 5px 10px 5px 0;
+}
+
 .box-blue h2.title{
 	font-weight: 300;
 	text-transform: uppercase;
@@ -76,4 +87,9 @@
 
 .main-footer p{
 	margin: 0;
+}
+
+ul{
+	margin: 0;
+	padding-left: 20px;
 }

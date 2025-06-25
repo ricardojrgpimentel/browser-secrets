@@ -15,6 +15,13 @@ import Network from '../Network'
 import Tracking from '../Tracking'
 import Plugins from '../Plugins'
 import Referrer from '../Referrer'
+import Battery from '../Battery'
+import Orientation from '../Orientation'
+import WebGLInfo from '../WebGLInfo'
+import MediaDevices from '../MediaDevices'
+import Storage from '../Storage'
+import Preferences from '../Preferences'
+import Offline from '../Offline'
 
 const MainApp: React.FC = () => {
   const ua = useMemo(() => parser(), [])
@@ -65,6 +72,27 @@ const MainApp: React.FC = () => {
             </div>
             <div className='col-md-6 col-xl-4'>
               <Referrer />
+            </div>
+            <div className='col-md-6 col-xl-4'>
+              <Battery />
+            </div>
+            <div className='col-md-6 col-xl-4'>
+              <Orientation />
+            </div>
+            <div className='col-md-6 col-xl-4'>
+              <WebGLInfo />
+            </div>
+            <div className='col-md-6 col-xl-4'>
+              <MediaDevices />
+            </div>
+            <div className='col-md-6 col-xl-4'>
+              <Storage />
+            </div>
+            <div className='col-md-6 col-xl-4'>
+              <Preferences />
+            </div>
+            <div className='col-md-6 col-xl-4'>
+              <Offline />
             </div>
           </div>
         </div>
